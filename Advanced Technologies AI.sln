@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advanced Technologies AI.Plugins", "Advanced Technologies AI.Plugins.csproj", "{DB3916E1-FC29-3B2F-0CEF-FFD527B32475}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advanced Technologies AI", "Advanced Technologies AI.csproj", "{4BBD4AAB-4E08-81CF-54FB-C2ED10BB056F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Advanced Technologies AI.Editor", "Advanced Technologies AI.Editor.csproj", "{AD2CB51C-66ED-CA09-F335-263A547CD96F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB3916E1-FC29-3B2F-0CEF-FFD527B32475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB3916E1-FC29-3B2F-0CEF-FFD527B32475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB3916E1-FC29-3B2F-0CEF-FFD527B32475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB3916E1-FC29-3B2F-0CEF-FFD527B32475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BBD4AAB-4E08-81CF-54FB-C2ED10BB056F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BBD4AAB-4E08-81CF-54FB-C2ED10BB056F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BBD4AAB-4E08-81CF-54FB-C2ED10BB056F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BBD4AAB-4E08-81CF-54FB-C2ED10BB056F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD2CB51C-66ED-CA09-F335-263A547CD96F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD2CB51C-66ED-CA09-F335-263A547CD96F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD2CB51C-66ED-CA09-F335-263A547CD96F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD2CB51C-66ED-CA09-F335-263A547CD96F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
