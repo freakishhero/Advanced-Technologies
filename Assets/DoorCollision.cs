@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class DoorCollision : MonoBehaviour {
 
@@ -23,6 +24,7 @@ public class DoorCollision : MonoBehaviour {
             UnitData data = collision.gameObject.GetComponent<UnitData>();
             if (data.getClass() == UnitData.Class.Thief)
             {
+                //GetComponent<NavMeshObstacle>().
                 Destroy(gameObject);
                 Debug.Log("Collision with thief DESTROY");
             }

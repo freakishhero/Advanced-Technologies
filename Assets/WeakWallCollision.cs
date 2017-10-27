@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class WeakWallCollision : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class WeakWallCollision : MonoBehaviour
             if (data.getClass() == UnitData.Class.Builder)
             {
                 Debug.Log("Collision WITH BUILDER - DESTROY");
+                GetComponent<NavMeshObstacle>().carving = false;
                 Destroy(gameObject);
             }
         }
