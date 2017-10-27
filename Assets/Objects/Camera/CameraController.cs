@@ -54,7 +54,7 @@ public class CameraController : MonoBehaviour {
         position.y -= mouse_scroll_wheel * mouse_scroll_speed * Time.deltaTime;
 
         position.x = Mathf.Clamp(position.x, -camera_limit.x, camera_limit.x);
-        position.y = Mathf.Clamp(position.y, 20.0f, 40.0f);
+        position.y = Mathf.Clamp(position.y, 30.0f, 50.0f);
         position.z = Mathf.Clamp(position.z, -camera_limit.y, camera_limit.y);
 
         transform.position = position;

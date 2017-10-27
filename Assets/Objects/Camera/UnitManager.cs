@@ -57,9 +57,14 @@ public class UnitManager : MonoBehaviour {
 
         if (Physics.Raycast(ray, out hit, 100))
         {
-            if (hit.collider.tag == "Terrain")
+            Debug.DrawLine(ray.origin, hit.point);
+
+            if (hit.collider.tag != "Unit")
             {
-                Debug.DrawLine(ray.origin, hit.point);
+
+                if (hit.collider.tag == "Door" || hit.collider.tag == "Weak Wall")
+                    location.transform.position = hit.collider.gameObject.transform.position;
+
                 location.transform.position = hit.point;
 
                 foreach (GameObject unit in units)
@@ -75,7 +80,7 @@ public class UnitManager : MonoBehaviour {
                                 createWayPoint(unit, location.transform.position);
                             }
                         }
-                        else if(Input.GetKey("p"))
+                       /* else if(Input.GetKey("p"))
                         {
                             if (data.Selected)
                             {
@@ -84,7 +89,7 @@ public class UnitManager : MonoBehaviour {
                                 createWayPoint(unit, unit.transform.position);
                                 createWayPoint(unit, location.transform.position);
                             }
-                        }
+                        }*/
                         else
                         {
                             if (data.Selected)
@@ -96,39 +101,21 @@ public class UnitManager : MonoBehaviour {
                         }
                     }
                 }
-
             }
         }
     }
 
-    void ProcessMovement(GameObject target)
-    {
-        data = target.GetComponent<UnitData>();
-
-        if (data.Selected)
-        {
-            //THIS LOOP DOESN'T WORK BECAUSE IT DOESN'T WAIT UNTIL THE WAYPOINT IS REACHED BEFORE CHECKING THE LAST ONE
-            /*for (int i = 0; i < data.getWayPoints().Count; i++)
-            {
-                data.Destination = data.getWayPoints()[0];
-                agent.destination = data.Destination;
-                if(!agent.pathPending)
-                {
-                    if(agent.remainingDistance <= agent.stoppingDistance)
-                    {
-                        if (!agent.hasPath || agent.velocity.sqrMagnitude == 0.0f)
-                        {
-                            data.getWayPoints().Clear();
-                        }
-                    }
-                }
-            }*/
-        }
-        
-    }
-
     // Update is called once per frame
     void Update () {
+
+        if(Input.GetKey("left ctrl") && Input.GetKey("a"))
+        {
+            foreach (GameObject unit in units)
+            {
+                data = unit.GetComponent<UnitData>();
+                data.Selected = true;
+            }
+        }
         if (Input.GetButtonDown("Fire1"))
         {
             if(SelectUnit())
@@ -145,9 +132,11 @@ public class UnitManager : MonoBehaviour {
                 }
             }
         }
+
         if (Input.GetButtonDown("Fire2"))
         {
             MovementRequest();
         }
+
 	}
 }

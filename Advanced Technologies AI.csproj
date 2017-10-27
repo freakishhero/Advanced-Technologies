@@ -87,10 +87,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DoorCollision.cs" />
     <Compile Include="Assets\Objects\Camera\CameraController.cs" />
     <Compile Include="Assets\Objects\Camera\UnitManager.cs" />
+    <Compile Include="Assets\Objects\Hazards\StrafingPillar.cs" />
     <Compile Include="Assets\Objects\Unit\ProcessMovement.cs" />
     <Compile Include="Assets\Objects\Unit\UnitData.cs" />
+    <Compile Include="Assets\WeakWallCollision.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
