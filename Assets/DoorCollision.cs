@@ -24,7 +24,6 @@ public class DoorCollision : MonoBehaviour {
             UnitData data = collision.gameObject.GetComponent<UnitData>();
             if (data.getClass() == UnitData.Class.Thief)
             {
-                //GetComponent<NavMeshObstacle>().
                 Destroy(gameObject);
                 Debug.Log("Collision with thief DESTROY");
             }

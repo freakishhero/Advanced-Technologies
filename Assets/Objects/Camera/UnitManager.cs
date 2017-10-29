@@ -62,10 +62,12 @@ public class UnitManager : MonoBehaviour {
             if (hit.collider.tag != "Unit")
             {
 
-                if (hit.collider.tag == "Door" || hit.collider.tag == "Weak Wall")
-                    location.transform.position = hit.collider.gameObject.transform.position;
+                
 
                 location.transform.position = hit.point;
+
+                if (hit.collider.tag == "Door" || hit.collider.tag == "Weak Wall")
+                    location.transform.position = hit.collider.gameObject.transform.position;
 
                 foreach (GameObject unit in units)
                 {

@@ -121,7 +121,7 @@ public class UnitData : MonoBehaviour {
             createPathMarkerLight();
         }
 
-        if (Vector3.Distance(waypoints[currentWaypoint], this.gameObject.transform.position) < 2.5f)
+        if (Vector3.Distance(waypoints[currentWaypoint], this.gameObject.transform.position) < 0.8f)
         {
             Destroy(waypoint);
             waypoint_marker_flag = false;
@@ -149,7 +149,7 @@ public class UnitData : MonoBehaviour {
             light = waypoint.AddComponent<Light>();
             light.color = Color.green;
             light.range = 5;
-            light.intensity = 500;
+            light.intensity = 50;
         }
         if (waypoint.GetComponent<Light>() && selected_flag == false)
         {
@@ -157,7 +157,7 @@ public class UnitData : MonoBehaviour {
         }
         if (waypoint.GetComponent<Light>() && selected_flag == true)
         {
-            light.intensity = 500;
+            light.intensity = 50;
         }
     }
 
